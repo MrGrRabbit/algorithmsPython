@@ -1,7 +1,7 @@
-# sorting by selection on python
-# page 58
-
-#------------------------------------------------------
+# Sorting by selection on python
+#
+#                                        page 58 chapter 2
+#---------------------------------------------------------
 
 
 def find_smallest(arr):

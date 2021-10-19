@@ -1,4 +1,6 @@
-
+# Quick sort 
+#                                               page 75 chapter 4
+#----------------------------------------------------------------
 # function sum
 """
 list = [2, 4, 6] 
@@ -9,7 +11,7 @@ def sum(list):
         return list[0] + sum(list[1:])
 print (sum(list))
 """
-# function подсчет элементов в списке
+# function counting of the item in the list
 """
 list = [1, 2, 3, 4, 6]
 def count(list):
@@ -18,7 +20,7 @@ def count(list):
     return 1 + count(list[1:])
 print (count(list))
 """
-# Нахождение наибольшего числа в списке
+# function of finding the largest number in the list
 """
 list = [1, 2, 5, 4]
 def MAX(list):
@@ -28,7 +30,7 @@ def MAX(list):
     return list[0] if list[0] > sub_max else sub_max
 print(MAX(list))
 """
-# бинарный поиск через рекурсию
+# binary search through recursion
 """"
 list = [1, 2, 3, 4, 5]
 
@@ -44,7 +46,7 @@ def binSearch(list, x, start):
         return binSearch(list[:mid], x)
 print(binSearch(list, 4))
 """
-# быстрая сортировка 
+# quick sort
 def quicksort(array):
     if len(array) < 2:      # base case
         return array
