@@ -1,8 +1,10 @@
-# Здесь сервер выполняет работу только в том случае, если U RL не хранится 
-# в кэше .  Однако перед тем, как возвращать данные, вы сохраняете их в кэше . 
-# Когда пользователь в следующий раз запросит тот же URL-aдpec ,  данные
-# можно отправить из кэша (вместо того чтобы заставлять сервер выполнять 
-# работу).
+# Hash table
+
+# The server works only if the URL is not stored in the cache.
+# However, before you return the data, you save it to the cashe.
+# When the user next requests the same URL, the data can be sent to the cache 
+# (instread of forcing the server to fo the work)
+#                                                            page 100 chapter 5
 # -----------------------------------------------------------------------------
 
 def get_data_for_server(url):
@@ -12,9 +14,9 @@ def get_data_for_server(url):
 cache = {}
 def get_url(url):
     if cache.get(url) != None:
-        return cache[url]               # Возвращаются кэшированные данные
-    else:                               # Сервер выполняет работу только в том случае, если URL не хранится в кэше
+        return cache[url]               # return cache data
+    else:                               # the server works only if the URL is not stored in the cashe
         data = get_data_for_server(url)
-        cache[url] = data               # Данные сначала сохраняются в кэше
+        cache[url] = data               # data is first stored in the cache
         return data                 
         
